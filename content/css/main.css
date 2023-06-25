@@ -1,0 +1,596 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #131313;
+}
+/* Header */
+a, p, h1 {
+    font-size: 14px;
+    text-decoration: none;
+    text-align: right;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform:uppercase;
+    color: rgb(255, 255, 255);
+}
+
+header {
+    margin-top: 28px;
+}
+header .container {
+    margin: 0 100px;
+}
+.burger {
+    display: none;
+}
+header .logo {
+    transition: all 0.5s ease;
+}
+#text.logo {
+    bottom: 12px;
+    position: relative;
+    margin: 8px 76px 0 8px;
+}
+header #logo:hover {
+    transform: scale(1.5);
+}
+header .menu {
+    display: inline;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    bottom: 20px
+ }
+header .menu li  {
+    display: inline;
+    margin-right: 42px;
+    list-style: none;
+    padding: 0;
+}
+header .menu li:last-of-type  {
+    margin-right:0;
+}
+header .menu li a {
+    transition: all 0.3s ease;
+}
+.menu li a:hover {
+    opacity: 0.7;
+}
+.container_2 {
+    display: contents;
+}
+
+.phone__border {
+    display: inline-block;
+    width: 68.5px;
+    height: 58px;
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.4;
+    z-index: 1;
+    margin-left: 262px;
+    vertical-align: top;
+}
+.phone__border #phone__logo {
+    display: inline-block;
+    position: relative;
+    margin: 25% 25%;
+    left:5px;
+    align-items:center;
+    opacity: 0.4;
+    transform: skewX(20deg);
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+header #phone__logo:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: skewX(20deg);
+    transform: scale(1.1);
+    border-radius: 6px;
+    opacity: 0.8;
+}
+.container_2 .label__border {
+    display: inline-block;
+    height: 58px;
+    background-color:#C2AB81;
+    transform: skew(-20deg);
+    margin-left: 20.5px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    vertical-align: top;
+    padding: 0 60px;
+}
+
+.container_2 .label__border:hover {
+    background-color:#766a55;
+    transition: all 0.5s ease;
+}
+.container_2 p {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-shadow: #000000 1px 1px 1px;
+    transition: all 0.5s ease;
+    z-index: 2;
+    position: sticky;
+    top: 50px;
+}
+.parallelogram {
+    display: inline-block;
+    width: 10px;
+    height: 58px;
+    background-color:rgb(255, 255, 255);
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+    vertical-align: top;
+}
+
+/* Modal */
+.modal {display: none; transition: all 0.5s ease;}
+
+.modal .modal__container {
+    display: flex;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(19,19,19,1) 50%);
+    position: absolute;
+    width: 1770px;
+    height: 900px;
+    top:150px;
+    left:94px;
+    z-index: 3;
+}
+.close__border {
+    position: absolute;
+    margin: 6% 93%;
+    width: 100px;
+    height: 70px;
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.4;
+    z-index: 1;
+}
+.close__border #close__logo {
+    position: absolute;
+    margin: 14% 28%;
+    width: 40px;
+    height: 40px;
+    align-items:center;
+    opacity: 0.4;
+    transform: skewX(20deg);
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+header #close__logo:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: skewX(20deg);
+    transform: scale(1.1);
+    border-radius: 6px;
+    opacity: 0.8;
+}
+.modal .modal__inputs {
+    display: flex;
+    background:#131313;
+    flex-direction: column;
+    margin-left: 95px;
+    margin-top: 76px;
+}
+.modal .modal__inputs h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+}
+.modal .modal__inputs p {
+    width: 370px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    opacity: 0.7;
+    margin-bottom: 50px;
+}
+
+.modal .modal__inputs .request_submit {
+    margin: 0 -170px;
+    text-transform: uppercase;
+    color:#FFFF;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modal .modal__inputs .request__border {
+    position: absolute;
+    top:838px;
+    margin-left: 10px;
+    padding: 30px 125px;
+    background-color:#C2AB81;
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.modal .modal__inputs .request__border:hover {
+    background:#766a55
+}
+.modal .modal__inputs .parallelogram {
+    position: absolute;
+    top:840px;
+    margin-left: 270px;
+
+}
+#agree {
+    position: absolute;
+    top: 820px;
+    margin-left: 323px;
+}
+
+.modal .modal__container input {
+    display: block;
+    width:724px;
+    height: 70px;
+    left:913px;
+    color:#FFFF;
+    text-transform: uppercase;
+    background:#131313;
+    border: solid gray;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 36px;
+    margin-bottom: 20px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.modal .modal__container input::placeholder {
+    color:#FFFF;
+    top: -20px;
+}
+.modal .modal__container .question {
+    padding: 75px 20px;
+    text-align:left;
+}
+
+/* Main-Left-Container */
+
+.main img {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 28px;
+    border-radius:60px 60px 0px 0px;
+    border-bottom:  #131313 50px 50px 20px;
+    transition: all 0.5s ease;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.main .left__container { 
+    position: relative;
+
+ }
+.main .left__container h1 {
+    position: absolute;
+    top: 598px;
+    left: 100px;
+    font-size:  42px;
+    font-weight: 700;
+    line-height: 51px;
+    text-align: left;
+}
+.main .left__container p {
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400 ;
+    text-transform: none;
+    top:740px;
+    left: 100px;
+    text-shadow: #000000 1px 1px 1px;
+    opacity: 0.8;
+    
+}
+.main .left__container a {
+    display: block;
+    position:absolute;
+    top: 804px;
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 20px 65px;
+    background-color:#C2AB81;
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+}
+.main .left__container .request {
+    top: 5px;
+    left: 70px;
+    position: absolute;
+    text-transform: uppercase;
+    color: #FFFF;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 2;
+}
+.main .left__container .label__border {
+    position: absolute;
+    margin-left: 118px;
+    top:804px;
+    padding: 30px 125px;
+    background-color:#C2AB81;
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.main .left__container .label__border:hover {
+    background:#766a55;
+    transition: all 0.5s ease;
+}
+.main .left__container .parallelogram {
+    display: inline-block;
+}
+.main .left__container .parallelogram {
+    position: absolute;
+    width: 10px;
+    height: 60px;;
+    top: 804px;
+    left: 375px;
+    background-color:rgb(255, 255, 255);
+    transform: skew(-20deg);
+    border: 1px solid rgb(255, 255, 255);
+}
+/* END InfoBlocks */
+
+.inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-left: 100px;
+}
+.card {
+    box-sizing: border-box;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 320px;
+    height: 620px;
+    background:#FFFF;
+    overflow: hidden;
+    word-break: break-all;
+}
+.card h3 {
+    margin-left: 24px;
+    font-weight: 700;
+    font-family: 'Mulish', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color:black
+}
+.card .p_title {
+    margin-left: 24px;
+    width: 85%;
+    padding-right:2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: none;
+    color:black;
+}
+.card p {
+    margin-left: 24px;
+    width: 85%;
+    padding-right:2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    color:black;
+}
+
+/* More cards */
+.more_cards {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 31px;
+    left: 44.7%;
+    padding: 10px 125px;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #C2AB81;
+    transform: skew(-20deg);
+    cursor: pointer;
+    padding: 9px 80px;
+}
+.more_cards:hover {
+    background-color:rgb(148, 0, 0);
+}
+.more_cards p {
+    text-decoration: none;
+    transform: skewX(20deg);
+    text-transform: uppercase;
+    text-shadow: #000000 1px 1px 1px;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+.footer__container .parallelogram {
+    margin-left: 59%;
+    margin-top: 31px;
+    height: 60px
+}
+.footer h1{
+    position: absolute;
+    margin: 100px auto;
+    left:50%;
+    padding:10px;
+}
+
+/* IPAD Adaptive */
+@media screen and (max-width: 768px) {
+    .hidden {
+        display: none;
+    }
+    header {
+        margin-top: 30px;
+    }
+    header .container {
+        margin: 0 51px 0 49px;
+    }
+    .burger {
+        display: inline-block;
+        margin-right: 91px;
+        margin-bottom: 5px;
+    }
+    header .menu {
+        display: none;
+        position: absolute;
+        align-items: center;
+        list-style: none;
+        top: 169px;
+        z-index: 100;
+        left: 49px;
+        right: 456px;
+    }
+
+    .menu li a {
+        -webkit-text-stroke-width: 0.1px;
+        -webkit-text-stroke-color:  #808080;
+        color:#000000;;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 150%;
+    }
+    .menu li {
+        margin-bottom: 15px;
+    }
+    header .logo {
+        margin-right: 8px;
+    }
+    #text.logo {
+        margin: 0;
+        width: 90px;
+        height: 24px;
+    }
+    .phone__border {
+        margin-left: 91px;
+    }
+    .container_2 .label__border {
+        padding: 0 27px;
+        margin: 0 0 0 8px;
+
+    }
+    .parallelogram {
+        width: 5px;
+        margin-left: 2px;
+    }
+
+    element.style {
+    }
+    .main img {
+        display: block;
+        position: relative;
+        width: 765px;
+        margin-top: 8px;
+        height: 907px;
+        object-fit: cover;
+    }
+        .main .left__container h1 {
+            top: 540px;
+            left: 49px;
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 51px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+    .main .left__container p {
+        position: absolute;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        text-transform: none;
+        top: 680px;
+        left: 49px;
+        text-shadow: #000000 1px 1px 1px;
+        opacity: 0.8;
+        width: 28em;
+        text-align: left;
+    }
+    .footer__container h1 {
+        font-size: 42px;
+        margin: 44px 0 41px 49px;
+        left: 0;
+        text-align: left;
+    }
+    .main .left__container .label__border {
+        margin-left: 49px;
+    }
+    .main .left__container .parallelogram {
+        left: 305px;
+    }
+    .inner {
+        margin: 0 40px;
+    }
+    .card {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .more_cards {
+        position: absolute;
+        margin: 0 25%;
+        left: 0;
+    }
+    .footer__container .parallelogram {
+        margin-left: 59%;
+         margin-top: 0;
+        height: 60px;
+        width: 5px;
+        margin-left: 465px;
+    }
+}
+/* IPhone Adaptive */
+@media screen and (max-width: 414px) {
+    header {
+        margin-top: 20px;
+    }
+    .container_2 {
+        display: none;
+    }
+    header .container {
+        margin: 0 15px;
+        width: 100%;
+    }
+    .main .left__container h1 {
+        top: 470px;
+        left: 49px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 51px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    .main .left__container p {
+        position: absolute;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        text-transform: none;
+        top: 663px;
+        left: 49px;
+        text-shadow: #000000 1px 1px 1px;
+        opacity: 0.8;
+        width: 22em;
+        text-align: left;
+    }
+}
